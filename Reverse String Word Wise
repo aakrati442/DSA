@@ -14,3 +14,26 @@ Sample Input 2
 Always indent your code
 Sample Output 2
 code your indent Always
+
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		String str=sc.next();
+		int n=str.length();
+		int i=str.length()-1;
+		String ans="";
+		while(i>=0){
+		  if(str.charAt(i)==' '){
+		      ans+=str.substring(i+1,n)+" ";
+		      n=i;
+		  }  
+		  i--;
+		}
+		ans+=str.substring(i+1,n);
+		System.out.println(ans);
+    }
+}
